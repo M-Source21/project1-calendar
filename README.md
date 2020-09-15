@@ -16,6 +16,9 @@ THEN the day container is magnified
 WHEN I enter an item on the to do list
 THEN it is save to local storage 
 
+##API's
+USED Google maps as a third party API to connect events/meetings to an adress  
+
 IMAGE 
 
 
