@@ -1,0 +1,31 @@
+#calendarBody {
+    display: flex;
+}
+
+#calendarMonth {
+    margin: 0 30px;
+}
+
+.days {
+    border: black 1px solid;
+width: 100px;
+height: 100px;
+}
+
+.weeks {
+    display: flex;
+    margin: 2px 0;
+  border: black 1px solid;
+  width
+}
+
+#weeks-days {
+    display: flex;
+}
+
+.daily {
+    border: black 1px solid;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+}
