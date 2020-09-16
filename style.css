@@ -29,3 +29,12 @@ height: 100px;
     height: 30px;
     text-align: center;
 }
+
+h1{
+    font-size: 100px;
+    text-align: center;
+}
+
+.card, .list-group{
+    border: black 1px solid;
+}
