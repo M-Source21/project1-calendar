@@ -12,7 +12,12 @@ width: 100px;
 height: 100px;
 }
 
-.weeks {
+#weeks_1,
+#weeks_2,
+#weeks_3,
+#weeks_4,
+#weeks_5
+ {
     display: flex;
     margin: 2px 0;
   border: black 1px solid;
@@ -28,4 +33,11 @@ height: 100px;
     width: 100px;
     height: 30px;
     text-align: center;
+}
+
+#monthName {
+    font-weight: bolder;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 25px;
 }

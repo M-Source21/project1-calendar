@@ -1,157 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Simple Calendar</title>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel= "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"></link>
-        <link rel= "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></link>>
-        <link rel= "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></link>>
-        <link rel="stylesheet" href="./style.css">
-    </head>
-    <body>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-        <!--Header with Title, add css -->
-        <div id = "titleBox" class = "container" style = "text-align:center">
-            <h1>Monthly Calendar </h1>
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Calendr</title>
+  </head>
+  <body>
+      <!--Header with Title, add css -->
+      <div class="container">
+        <div class="jumbotron">
+          <h1>Calender</h1>      
+        </div>    
+      </div>
+    <br>
+    <br>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Create Task</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-        <br>
-        <br>
-        <div id="calendarBody">
-            <!--To Do list code-->
-            <div class="card" style="width: 18rem;">
-                <div class="card-header" style= "text-align:center">
-                    To Do 
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                </ul>
-            </div>
-        <div id="calendarMonth">
-
-            <div id="weeks-days">
-                <div class="daily">Sun</div>
-                <div class="daily">Mon</div>
-                <div class="daily">Tue</div>
-                <div class="daily">Wed</div>
-                <div class="daily">Thu</div>
-                <div class="daily">Fri</div>
-                <div class="daily">Sat</div>
-            </div>
-            
-            <div class="weeks">
-                <div class="days"></div>
-                <div class="days"></div>
-                <div class="days"></div>
-                <div class="days"></div>
-                <div class="days"></div>
-                <div class="days"></div>
-                <div class="days"></div>
-            </div>
-
-            <div class="weeks">
-                <div class="days"></div>
-                <div class="days"></div>
-                <div class="days"></div>
-                <div class="days"></div>
-                <div class="days"></div>
-                <div class="days"></div>
-                <div class="days"></div>
-            </div>
-            <div class="weeks">
-                <div class="days"></div>
-                <div class="days"></div>
-                <div class="days"></div>
-                <div class="days"></div>
-                <div class="days"></div>
-                <div class="days"></div>
-                <div class="days"></div>
-            </div>
-            <div class="weeks">
-                <div class="days"></div>
-                <div class="days"></div>
-                <div class="days"></div>
-                <div class="days"></div>
-                <div class="days"></div>
-                <div class="days"></div>
-                <div class="days"></div>
-            </div>
-            <div class="weeks">
-                <div class="days"></div>
-                <div class="days"></div>
-                <div class="days"></div>
-                <div class="days"></div>
-                <div class="days"></div>
-                <div class="days"></div>
-                <div class="days"></div>
-            </div>
+        <div class="modal-body">
+            <input type="text">
         </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
     </div>
-        
-
-
-
-
-
-
-        <!--Calendar code, must add css to make calendar formatting -->
-        <!--<ul class="weekdays">
-            <li>Mo</li>
-            <li>Tu</li>
-            <li>We</li>
-            <li>Th</li>
-            <li>Fr</li>
-            <li>Sa</li>
-            <li>Su</li>
+  </div>
+</div>
+<br>
+<br>
+<div id="calendarBody">
+    <!--To Do list code-->
+    <div class="card" style="width: 18rem;">
+        <div class="card-header" style= "text-align:center">
+            To Do 
+        </div>
+        <ul class="list-group">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Vestibulum at eros</li>
         </ul>
-        
-        <ul class="days">  
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li><span class="active">10</span></li>
-            <li>11</li>
-            <li>12</li>
-            <li>13</li>
-            <li>14</li>
-            <li>15</li>
-            <li>16</li>
-            <li>17</li>
-            <li>18</li>
-            <li>19</li>
-            <li>20</li>
-            <li>21</li>
-            <li>22</li>
-            <li>23</li>
-            <li>24</li>
-            <li>25</li>
-            <li>26</li>
-            <li>27</li>
-            <li>28</li>
-            <li>29</li>
-            <li>30</li>
-            <li>31</li>
-        </ul> -->
-        
-        
-        
-    </body>
+    </div>
+<div id="calendarMonth">
+    <div id="monthName">September</div>
+    <div id="weeks-days">
+        <div class="daily">Sun</div>
+        <div class="daily">Mon</div>
+        <div class="daily">Tue</div>
+        <div class="daily">Wed</div>
+        <div class="daily">Thu</div>
+        <div class="daily">Fri</div>
+        <div class="daily">Sat</div>
+    </div>        
+    </div>
+</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./data_calendar.js"></script>
+    <script src="./app.js"></script>
+  </body>
 </html>
