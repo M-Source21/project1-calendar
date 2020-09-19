@@ -53,26 +53,28 @@
 <br>
 <br>
 <div id="calendarBody">
-    <!--To Do list code-->
-    <div class="card" style="width: 18rem;">
-        <div class="card-header" style= "text-align:center">
-            To Do 
+
+    <!--New York Times Newsfeed-->
+    <div class="row">
+      <div class="col-sm-12">
+        <br>
+
+        <!-- This card will initially be made up of a card and wells for each of the articles retrieved -->
+        <div class="card">
+
+          <!-- card Heading for the retrieved articles box -->
+          <div class="card-header">
+            <strong>
+              <i class="fa fa-table"></i> Top Articles</strong>
+          </div>
+
+          <!-- This main card will hold each of the resulting articles -->
+          <div class="card-body" id="article-section">
+          </div>
         </div>
-        <ul class="list-group">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-        </ul>
+      </div>
     </div>
+
 <div id="calendarMonth">
     <div id="monthName">September</div>
     <div id="weeks-days">
@@ -146,10 +148,12 @@ function newElement() {
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src=https://code.jquery.com/jquery.js></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
     <script src="./data_calendar.js"></script>
     <script src="./app.js"></script>
+
   </body>
 </html>
