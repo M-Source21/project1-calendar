@@ -4,19 +4,19 @@ function calendarStructure() {
   }
   for (i = 0; i < 7; i++) {
     $("#weeks_1").append(
-      `<div class="days"><a href="#"data-toggle="modal" data-target="#exampleModalLong">0</a></div>`
+      `<div class="days"><a href="#"data-toggle="modal" data-target="#exampleModalLong"></a></div>`
     );
     $("#weeks_2").append(
-      `<div class="days"><a href="#"data-toggle="modal" data-target="#exampleModalLong">0</a></div>`
+      `<div class="days"><a href="#"data-toggle="modal" data-target="#exampleModalLong"></a></div>`
     );
     $("#weeks_3").append(
-      `<div class="days"><a href="#"data-toggle="modal" data-target="#exampleModalLong">0</a></div>`
+      `<div class="days"><a href="#"data-toggle="modal" data-target="#exampleModalLong"></a></div>`
     );
     $("#weeks_4").append(
-      `<div class="days"><a href="#"data-toggle="modal" data-target="#exampleModalLong">0</a></div>`
+      `<div class="days"><a href="#"data-toggle="modal" data-target="#exampleModalLong"></a></div>`
     );
     $("#weeks_5").append(
-      `<div class="days"><a href="#"data-toggle="modal" data-target="#exampleModalLong">0</a></div>`
+      `<div class="days"><a href="#"data-toggle="modal" data-target="#exampleModalLong"></a></div>`
     );
   }
 }
