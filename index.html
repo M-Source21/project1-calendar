@@ -7,9 +7,9 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
     <link rel="stylesheet" href="./style.css">
-
+<!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <title>Calendar</title>
   </head>
   <body>
@@ -20,6 +20,7 @@
         <div class="jumbotron">
           <h1>Calendar</h1>      
         </div>    
+
       </div>
     <br>
     <br>
@@ -74,7 +75,11 @@
         </ul>
     </div>
 <div id="calendarMonth">
-    <div id="monthName">September</div>
+    <div id="monthName">
+      <i id="previousMonthBtn" class="fas fa-caret-left"></i>
+      <span id="currentMonth">September</span>
+      <i id="nextMonthBtn" class="fas fa-caret-right"></i>
+    </div>
     <div id="weeks-days">
         <div class="daily">Sun</div>
         <div class="daily">Mon</div>
