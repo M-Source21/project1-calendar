@@ -72,18 +72,27 @@ insertDaysIntoTable(September, 2);
 
 console.log(daysLeftGlobalMonth);
 
+// Previous and Next Month Buttons
 // Current month
 today = new Date();
 var currentMonth = $("#currentMonth")[0];
 var month = today.getMonth();
 currentMonth.innerText = monthYear[month];
-// Initial Month
+// Previous Button
 $("#previousMonthBtn").on("click", function () {
   month--;
   currentMonth.innerText = monthYear[month];
-  // currentMonth.innerText = monthYear[today.getMonth() + 1];
+  if (month == -1) {
+    month = 11;
+    currentMonth.innerText = monthYear[month];
+  }
 });
+// Next Button
 $("#nextMonthBtn").on("click", function () {
   month++;
   currentMonth.innerText = monthYear[month];
+  if (month == 12) {
+    month = 0;
+    currentMonth.innerText = monthYear[month];
+  }
 });

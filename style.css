@@ -181,3 +181,16 @@ input {
   cursor: pointer;
 }
 
+#monthName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#currentMonth {
+  margin: 0px 15px;
+  width: 350px;
+}
+
+
+
