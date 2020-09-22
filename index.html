@@ -3,7 +3,7 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -13,144 +13,143 @@
     <title>Calendar</title>
   </head>
   <body>
-      <!-- to do list -->
+    <!-- to do list -->
+
+    <!--Header with Title, add css -->
+    <div class="container">
+      <div class="jumbotron">
+        <h1 style = "text-align:center">Calendar</h1>      
+      </div> 
+      
+      <!-- Modal -->
+      <div class="row">
+      <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Create Task</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div id="myDIV" class="header">
+              <h2 style="margin:5px">My To Do List</h2>
+              <input type="text" id="myInput" placeholder="Title...">
+              <span onclick="newElement()" class="addBtn">Add</span>
+            </div>
+            
+            <ul id="myUL">
+            
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+      <div section>
+        <main class="column" id="calendarBody" style="float:left">
+          <div id="calendarMonth">
+            <div id="monthName">September</div>
+              <div id="weeks-days">
+                <div class="daily">Sun</div>
+                <div class="daily">Mon</div>
+                <div class="daily">Tue</div>
+                <div class="daily">Wed</div>
+                <div class="daily">Thu</div>
+                <div class="daily">Fri</div>
+                <div class="daily">Sat</div>
+              </div>        
+            </div>
+          </div>
+        </main>
+
+        <aside class="column" id="nytFeed"  style="float:right width:50%" >
+          
+          <!-- This card will initially be made up of a card and wells for each of the articles retrieved -->
+          <div class="card">
   
-      <!--Header with Title, add css -->
-      <div class="container">
-        <div class="jumbotron">
-          <h1 style = "text-align:center">Calendar</h1>      
-        </div>    
-      </div>
-    <br>
-    <br>
-
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Create Task</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div id="myDIV" class="header">
-          <h2 style="margin:5px">My To Do List</h2>
-          <input type="text" id="myInput" placeholder="Title...">
-          <span onclick="newElement()" class="addBtn">Add</span>
-        </div>
-        
-        <ul id="myUL">
-        
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-<br>
-<br>
-<div id="calendarBody">
-
-    <!--New York Times Newsfeed-->
-    <div class="row">
-      <div class="col-sm-12">
-        <br>
-
-        <!-- This card will initially be made up of a card and wells for each of the articles retrieved -->
-        <div class="card">
-
-          <!-- card Heading for the retrieved articles box -->
-          <div class="card-header">
-            <strong>
-              <i class="fa fa-table"></i> Top Articles</strong>
+            <!-- card Heading for the retrieved articles box -->
+            <div class="card-header">
+              <strong>
+                <i class="fa fa-table"></i> Top Articles</strong>
+            </div>
+  
+            <!-- This main card will hold each of the resulting articles -->
+            <div class="card-body" id="article-section">
+            </div>
           </div>
-
-          <!-- This main card will hold each of the resulting articles -->
-          <div class="card-body" id="article-section">
-          </div>
-        </div>
-      </div>
+        </aside>
+      </section>
     </div>
 
-<div id="calendarMonth">
-    <div id="monthName">September</div>
-    <div id="weeks-days">
-        <div class="daily">Sun</div>
-        <div class="daily">Mon</div>
-        <div class="daily">Tue</div>
-        <div class="daily">Wed</div>
-        <div class="daily">Thu</div>
-        <div class="daily">Fri</div>
-        <div class="daily">Sat</div>
-    </div>        
-    </div>
-</div>
-<script>
-  // Create a "close" button and append it to each list item
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
 
-// Click on a close button to hide the current list item
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
+  <script>
+    // Create a "close" button and append it to each list item
+  var myNodelist = document.getElementsByTagName("LI");
+  var i;
+  for (i = 0; i < myNodelist.length; i++) {
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    myNodelist[i].appendChild(span);
   }
-}
 
-// Add a "checked" symbol when clicking on a list item
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-
-// Create a new list item when clicking on the "Add" button
-function newElement() {
-  var li = document.createElement("li");
-  var inputValue = document.getElementById("myInput").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("You must write something!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("myInput").value = "";
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
+  // Click on a close button to hide the current list item
+  var close = document.getElementsByClassName("close");
+  var i;
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
       var div = this.parentElement;
       div.style.display = "none";
     }
   }
-}
-</script>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src=https://code.jquery.com/jquery.js></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="./nytfeed.js"></script>
-    <script src="./data_calendar.js"></script>
-    <script src="./app.js"></script>
+  // Add a "checked" symbol when clicking on a list item
+  var list = document.querySelector('ul');
+  list.addEventListener('click', function(ev) {
+    if (ev.target.tagName === 'LI') {
+      ev.target.classList.toggle('checked');
+    }
+  }, false);
+
+  // Create a new list item when clicking on the "Add" button
+  function newElement() {
+    var li = document.createElement("li");
+    var inputValue = document.getElementById("myInput").value;
+    var t = document.createTextNode(inputValue);
+    li.appendChild(t);
+    if (inputValue === '') {
+      alert("You must write something!");
+    } else {
+      document.getElementById("myUL").appendChild(li);
+    }
+    document.getElementById("myInput").value = "";
+
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    li.appendChild(span);
+
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
+  }
+  </script>
+
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src=https://code.jquery.com/jquery.js></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src="./nytfeed.js"></script>
+      <script src="./data_calendar.js"></script>
+      <script src="./app.js"></script>
 
   </body>
 </html>
