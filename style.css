@@ -2,10 +2,6 @@
     display: flex;
 }
 
-#calendarMonth {
-    margin: 0 30px;
-}
-
 .days {
     border: black 1px solid;
 width: 100px;
@@ -192,5 +188,26 @@ input {
   width: 350px;
 }
 
+#mainContents {
+  display: flex;
+  width: 100%;
+}
 
 
+#nytFeed {
+  display: flex;
+  width: 450px;
+}
+
+@media screen and (max-width: 900px) {
+  #mainContents {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #nytFeed {
+    margin-top: 50px;
+    width: 700px;
+  }
+
+}
