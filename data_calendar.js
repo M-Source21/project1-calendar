@@ -75,6 +75,7 @@ const February = [
   "26",
   "27",
   "28",
+  "29",
 ];
 const March = [
   "1",
@@ -237,6 +238,7 @@ const July = [
   "28",
   "29",
   "30",
+  "31",
 ];
 const August = [
   "1",

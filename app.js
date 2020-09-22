@@ -1,3 +1,4 @@
+// Insert Weeks and Days in the Calendar
 function calendarStructure() {
   for (i = 0; i < 5; i++) {
     $("#calendarMonth").append(`<div id="weeks_${i + 1}"></div>`);
@@ -23,19 +24,38 @@ function calendarStructure() {
 
 calendarStructure();
 
+// Month
 var daysLeftGlobalMonth;
 var currentPageMonth;
-
-if ($("#monthName").text() == "September") {
-  var currentPageMonth = "09";
-} else if ($("#monthName").text() == "October") {
-  var currentPageMonth = "10";
-} else if ($("#monthName").text() == "November") {
-  var currentPageMonth = "11";
-} else if ($("#monthName").text() == "December") {
-  var currentPageMonth = "12";
+function currentMonth() {
+  if ($("#currentMonth").innerText == "January") {
+    currentPageMonth = "01";
+  } else if ($("#currentMonth").innerText == "February") {
+    currentPageMonth = "02";
+  } else if ($("#currentMonth").innerText == "March") {
+    currentPageMonth = "03";
+  } else if ($("#currentMonth").innerText == "April") {
+    currentPageMonth = "04";
+  } else if ($("#currentMonth").innerText == "May") {
+    currentPageMonth = "05";
+  } else if ($("#currentMonth").innerText == "June") {
+    currentPageMonth = "06";
+  } else if ($("#currentMonth").innerText == "July") {
+    currentPageMonth = "07";
+  } else if ($("#currentMonth").innerText == "August") {
+    currentPageMonth = "08";
+  } else if ($("#currentMonth").innerText == "September") {
+    currentPageMonth = "09";
+  } else if ($("#currentMonth").innerText == "October") {
+    currentPageMonth = "10";
+  } else if ($("#currentMonth").innerText == "November") {
+    currentPageMonth = "11";
+  } else if ($("#currentMonth").innerText == "December") {
+    currentPageMonth = "12";
+  }
 }
 
+// Insert days in the calendar
 function insertDaysIntoTable(month, num) {
   var daysLeftMonth = 7 - ((35 - (num + month.length)) % 7);
 
@@ -68,12 +88,63 @@ function insertDaysIntoTable(month, num) {
   daysLeftGlobalMonth = daysLeftMonth;
 }
 
+function insertDaysIntoTableMonthly(month) {
+  if (month === "January") {
+    insertDaysIntoTable(January, 3);
+  } else if (month === "February") {
+    insertDaysIntoTable(February, 6);
+  } else if (month === "March") {
+    insertDaysIntoTable(March, 0);
+  } else if (month === "April") {
+    insertDaysIntoTable(April, 3);
+  } else if (month === "May") {
+    insertDaysIntoTable(May, 5);
+  } else if (month === "June") {
+    insertDaysIntoTable(June, 1);
+  } else if (month === "July") {
+    insertDaysIntoTable(July, 3);
+  } else if (month === "August") {
+    insertDaysIntoTable(August, 6);
+  } else if (month === "September") {
+    insertDaysIntoTable(September, 2);
+  } else if (month === "October") {
+    insertDaysIntoTable(October, 4);
+  } else if (month === "November") {
+    insertDaysIntoTable(November, 0);
+  } else if (month === "December") {
+    insertDaysIntoTable(December, 2);
+  }
+}
+
+// Current month
+today = new Date();
+var currentMonth = $("#currentMonth")[0];
+var month = today.getMonth();
+currentMonth.innerText = monthYear[month];
+// Previous Button
+$("#previousMonthBtn").on("click", function () {
+  month--;
+  let currentMonthIntoTable = monthYear[month];
+  currentMonth.innerText = currentMonthIntoTable;
+  if (month === 0) {
+    $("#previousMonthBtn").hide();
+  } else {
+    $("#nextMonthBtn").show();
+  }
+  insertDaysIntoTableMonthly(currentMonthIntoTable);
+});
+// Next Button
+$("#nextMonthBtn").on("click", function () {
+  month++;
+  let currentMonthIntoTable = monthYear[month];
+  currentMonth.innerText = currentMonthIntoTable;
+  if (month === 11) {
+    $("#nextMonthBtn").hide();
+  } else {
+    $("#previousMonthBtn").show();
+  }
+  insertDaysIntoTableMonthly(currentMonthIntoTable);
+});
+
+// Insert Initial Month / Day in Calendar
 insertDaysIntoTable(September, 2);
-
-console.log(daysLeftGlobalMonth);
-
-// function insertDaysIntoTable(month, num) {
-//   var startday = $("weeks_1")[0].children[`${num}`];
-// }
-
-// insertDaysIntoTable(daysSeptember, 2);

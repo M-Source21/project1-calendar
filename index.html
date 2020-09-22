@@ -7,9 +7,9 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
     <link rel="stylesheet" href="./style.css">
-
+<!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <title>Calendar</title>
   </head>
   <body>
@@ -47,40 +47,41 @@
     </div>
     
     
-      <div section>
-        <main class="column" id="calendarBody" style="float:left">
-          <div id="calendarMonth">
-            <div id="monthName">September</div>
-              <div id="weeks-days">
-                <div class="daily">Sun</div>
-                <div class="daily">Mon</div>
-                <div class="daily">Tue</div>
-                <div class="daily">Wed</div>
-                <div class="daily">Thu</div>
-                <div class="daily">Fri</div>
-                <div class="daily">Sat</div>
-              </div>        
-            </div>
+    <div id="mainContents">
+      <main id="calendarBody">
+        <div id="calendarMonth">
+          <div id="monthName">
+            <i id="previousMonthBtn" class="fas fa-caret-left"></i>
+            <div id="currentMonth"></div>
+            <i id="nextMonthBtn" class="fas fa-caret-right"></i>
           </div>
-        </main>
+          <div id="weeks-days">
+            <div class="daily">Sun</div>
+            <div class="daily">Mon</div>
+            <div class="daily">Tue</div>
+            <div class="daily">Wed</div>
+            <div class="daily">Thu</div>
+            <div class="daily">Fri</div>
+            <div class="daily">Sat</div>
+          </div>        
+        </div>
+      </main>
 
-        <aside class="column" id="nytFeed"  style="float:right width:50%" >
-          
-          <!-- This card will initially be made up of a card and wells for each of the articles retrieved -->
-          <div class="card">
-  
-            <!-- card Heading for the retrieved articles box -->
-            <div class="card-header">
-              <strong>
-                <i class="fa fa-table"></i> Top Articles</strong>
-            </div>
-  
-            <!-- This main card will hold each of the resulting articles -->
-            <div class="card-body" id="article-section">
-            </div>
+
+      <aside id="nytFeed">
+                <!-- This card will initially be made up of a card and wells for each of the articles retrieved -->
+        <div class="card">
+          <!-- card Heading for the retrieved articles box -->
+          <div class="card-header">
+            <strong>
+              <i class="fa fa-table"></i> Top Articles</strong>
           </div>
-        </aside>
-      </section>
+
+          <!-- This main card will hold each of the resulting articles -->
+          <div class="card-body" id="article-section">
+          </div>
+        </div>
+      </aside>
     </div>
 
 
