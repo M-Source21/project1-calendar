@@ -1,9 +1,9 @@
-function weatherForecast(cityName, countryCode) {
+function weatherForecast(lat, lon) {
   var queryURL =
-    "https://pro.openweathermap.org/data/2.5/forecast/climate?q=" +
-    cityName +
-    "," +
-    countryCode +
+    "https://pro.openweathermap.org/data/2.5/forecast/climate?lat=" +
+    lat +
+    "&lon=" +
+    lon +
     "&appid=8293cdf1f821bcf9f4e30739c53476af";
 
   $.ajax({
@@ -14,16 +14,20 @@ function weatherForecast(cityName, countryCode) {
   });
 }
 
-if (navigator.geolocation) {
-  navigator.geolocation.getCurrentPosition(function (position) {
-    var pos = {
-      lat: position.coords.latitude,
-      lng: position.coords.longitude,
-    };
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function (position) {
+      var pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude,
+      };
 
-    console.log(pos);
-  }),
-    function () {
-      console.log("This function is not supported");
-    };
+      weatherForecast(pos.lat, pos.lng);
+    }),
+      function () {
+        console.log("This function is not supported");
+      };
+  }
 }
+
+getLocation();
