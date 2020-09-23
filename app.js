@@ -148,3 +148,89 @@ $("#nextMonthBtn").on("click", function () {
 
 // Insert Initial Month / Day in Calendar
 insertDaysIntoTable(September, 2);
+
+
+var taskInput = document.querySelector("#myTask");
+var taskForm = document.querySelector("#exampleModalLongTitle");
+var taskList= document.querySelector ("#myUL");
+var taskCountSpan= document.querySelector("#taskCount");
+
+var tasks = [];
+
+init ();
+
+function renderTasks(){
+  //Clear tasks and update count 
+  taskList.innerHTML= "";
+  taskCountSpan.textContent = tasks.length;
+
+  //Render a new list for each task 
+  for (var i=o; i<tasks.length; i++){
+    var task= tasks[i];
+
+    var li = document.createElement("li");
+    li.textContent = task;
+    li.setAttribute("data-index", i);
+
+    var button = document.createElement("button");
+    button.textContent = "Complete";
+
+    li.appendChild(button);
+    taskList.appendChild(li);
+  }
+}
+
+function init() {
+  // Get stored tasks from localStorage
+  // Parsing the JSON string to an object
+  var storedTasks = JSON.parse(localStorage.getItem("tasks"));
+
+  // If tasks were retrieved from localStorage, update the tasks array to it
+  if (storedTasks !== null) {
+    tasks = storedTasks;
+  }
+
+  // Render tasks to the DOM
+  renderTasks();
+}
+
+function storeTasks() {
+  // Stringify and set "tasks" key in localStorage to tasks array
+  localStorage.setItem("tasks", JSON.stringify(task));
+}
+
+// When form is submitted...
+taskForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  var taskText = taskInput.value.trim();
+
+  // Return from function early if submitted taskText is blank
+  if (taskText === "") {
+    return;
+  }
+
+  // Add new taskText to tasks array, clear the input
+  task.push(taskText);
+  taskInput.value = "";
+
+  // Store updated tasks in localStorage, re-render the list
+  storeTasks();
+  renderTasks();
+});
+
+// When a element inside of the taskList is clicked...
+taskList.addEventListener("click", function(event) {
+  var element = event.target;
+
+  // If that element is a button...
+  if (element.matches("button") === true) {
+    // Get its data-index value and remove the task element from the list
+    var index = element.parentElement.getAttribute("data-index");
+    task.splice(index, 1);
+
+    // Store updated todos in localStorage, re-render the list
+    storeTasks();
+    renderTasks();
+  }
+});
