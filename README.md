@@ -1,6 +1,5 @@
-## User Story 
+# User Story 
 
-```
 AS a user 
 I WANT to be able to enter items/events into the calendar which will then be saved onto the local storage on my device and compose a to do list.
 I WANT to be able to view the daily news headlines, in addition to the daily weather
@@ -25,5 +24,10 @@ USED New York Times API to display daily headlines
 USED Weather API to showcase daily and weekly weather forecasts
 
 <b>Images</b>
-![light mode](lightmode.png)
-![dark mode](darkmode.png)
+![light mode](Assets/lightmode.png)
+![dark mode](Assets/darkmode.png)
+
+<b>Links:</b>
+GitHub: https://github.com/M-Source21/project1-calendar 
+Live Link: https://m-source21.github.io/project1-calendar/ 
+Presentation Link: https://docs.google.com/document/d/1f4Vr6Lih51AcUtKgMwzsrXJSHGu39eVaZITDPahGtv0/edit?usp=sharing
