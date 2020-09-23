@@ -29,16 +29,11 @@
     text-align: center;
 }
 
-#monthName {
-    font-weight: bolder;
-    font-size: 35px;
-    background-color: whitesmoke;
-    text-align: center;
-    margin-bottom: 25px;
-}
-
 .card, .list-group {
     border: black 1px solid;
+    margin: 10px;
+    border-spacing: 20px;
+    padding: 10px;
 }
 
 body {
@@ -48,8 +43,7 @@ body {
         background: #fff;
       }
       a {
-        color: #0033cc;
-      
+        color: #aa8cf0;
 }
 
 /* Include the padding and border in an element's total width and height */
@@ -119,7 +113,7 @@ ul li.checked::before {
 }
 
 .close:hover {
-    background-color: #f44336;
+    background-color: #cc271c;
     color: white;
 }
 
@@ -169,7 +163,6 @@ input {
 
 #previousMonthBtn, #nextMonthBtn {
     border: none;
-    background: none;
 }
 
 #previousMonthBtn:hover, #nextMonthBtn:hover {
@@ -180,6 +173,11 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    background-color: none;
+    font-weight: bolder;
+    font-size: 35px;
+    margin-bottom: 25px;
 }
 
 #currentMonth {
@@ -195,6 +193,7 @@ input {
 #nytFeed {
     display: flex;
     width: 450px;
+    border-spacing: 20px;
     margin: 10px;
     padding: 10px;
 }
@@ -207,21 +206,8 @@ input {
     #nytFeed {
         margin-top: 50px;
         width: 700px;
+        padding: 10px;
     }
-}
-
-/* dark mode */
-.dark-mode {
-    background-color: rgb(41, 41, 41);
-    color: white;
-}
-
-.dark-mode-border {
-    border: 2px solid darkgrey;
-}
-
-.dark-mode-background {
-    background: darkgrey;
 }
 
 .forecast {
@@ -229,4 +215,31 @@ input {
     flex-direction: row;
     justify-content: space-between;
     margin: 10px 0px;
+}
+
+
+/* dark mode */
+.dark-mode {
+    background-color: rgb(41, 41, 41);
+    color: darkgrey;
+}
+
+#darkModeBtn {
+    background-color: darkgray;
+}
+
+.dark-mode-border {
+    border: 2px solid darkgrey;
+    color: white;
+}
+
+.dark-mode-background {
+    background-color: rgb(77, 77, 77);
+    color: white;
+}
+
+.dark-mode-background2 {
+    background-color: rgb(105, 105, 105);
+    color: rgb(255, 255, 255);
+    background: darkgrey;
 }
