@@ -2,24 +2,28 @@
 
 ```
 AS a user 
-I WANT to be able to enter events/meetings into the calendar which will be saved into the local storage of my device and compose a to do list 
-SO THAT I can keep track of my availability and upcoming events or meetings as well as manage upcoming tasks 
+I WANT to be able to enter items/events into the calendar which will then be saved onto the local storage on my device and compose a to do list.
+I WANT to be able to view the daily news headlines, in addition to the daily weather
+SO THAT I can keep track of my availability and upcoming events as well as manage upcoming tasks
 
 ## Acceptance Criteria 
 GIVEN a calendar dashboard with form inputs (one month layout)
 WHEN I select a day from the calendar 
-THEN I am able to enter an event/meeting with an address which is saved into local storage and can be pinned on google maps 
+THEN I am able to enter an item/event that will be saved onto the local storage
 
-WHEN I hover over a day on the calendar 
-THEN the day container is magnified 
+WHEN I need to recall my daily events 
+THEN I will click on the day I want to view
 
 WHEN I enter an item on the to do list
 THEN it is save to local storage 
 
+WHEN I complete and item on my to do list
+THEN I can check it off my list to show that it has been completed
+
 ##API's
-USED Google maps as a third party API to connect events/meetings to an adress  
+USED New York Times API to display daily headlines
+USED Weather API to showcase daily and weekly weather forecasts
 
-IMAGE 
-
-
-<a src="https://github.com/M-Source21/project1-calendar">
+##Images
+<img src= "Assets/lightmode.png">
+<img src= "Assets/darkmode.png">
