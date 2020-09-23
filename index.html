@@ -91,93 +91,37 @@
       </aside>
     </div>
 
-
-    <script>
-
-      // dark mode
-      // listen for a click on the dark mode button
-      document.querySelector("#darkModeBtn").addEventListener('click', function () {
-        // toggle dark-mode class to the body
-        document.querySelector("body").classList.toggle('dark-mode');
-        document.querySelector(".jumbotron").classList.toggle('dark-mode');
-        // document.querySelectorAll(".daily").classList.toggle('dark-mode-border');
-        var dailyArray = document.querySelectorAll(".daily");
-          for(var i=0; i < dailyArray.length; i++) {
-            dailyArray[i].classList.toggle('dark-mode-border');
-          }
-          
-      })
-
-      // Create a "close" button and append it to each list item
-      var myNodelist = document.getElementsByTagName("LI");
-      var i;
-      for (i = 0; i < myNodelist.length; i++) {
-        var span = document.createElement("SPAN");
-        var txt = document.createTextNode("\u00D7");
-        span.className = "close";
-        span.appendChild(txt);
-        myNodelist[i].appendChild(span);
-      }
-
-      // Click on a close button to hide the current list item
-      var close = document.getElementsByClassName("close");
-      var i;
-      for (i = 0; i < close.length; i++) {
-        close[i].onclick = function () {
-          var div = this.parentElement;
-          div.style.display = "none";
-        }
-      }
-
-      // Add a "checked" symbol when clicking on a list item
-      var list = document.querySelector('ul');
-      list.addEventListener('click', function (ev) {
-        if (ev.target.tagName === 'LI') {
-          ev.target.classList.toggle('checked');
-        }
-      }, false);
-
-      // Create a new list item when clicking on the "Add" button
-      function newElement() {
-        var li = document.createElement("li");
-        var inputValue = document.getElementById("myInput").value;
-        var t = document.createTextNode(inputValue);
-        li.appendChild(t);
-        if (inputValue === '') {
-          alert("You must write something!");
-        } else {
-          document.getElementById("myUL").appendChild(li);
-        }
-        document.getElementById("myInput").value = "";
-
-        var span = document.createElement("SPAN");
-        var txt = document.createTextNode("\u00D7");
-        span.className = "close";
-        span.appendChild(txt);
-        li.appendChild(span);
-
-        for (i = 0; i < close.length; i++) {
-          close[i].onclick = function () {
-            var div = this.parentElement;
-            div.style.display = "none";
-          }
-        }
-      }
-    </script>
-
+                <!-- forecast -->
+                <div class="col-md-9">
+                  <div class="container" id="forecast">
+                      
+                  </div>
+              </div>
+          </div>
+      </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src=https://code.jquery.com/jquery.js></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
       crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="script.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"></script>
     <script src="./nytfeed.js"></script>
     <script src="./data_calendar.js"></script>
     <script src="./app.js"></script>
-
+    <script src="./wf.js"></script>
 </body>
 
 </html>
