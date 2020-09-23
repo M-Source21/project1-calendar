@@ -14,7 +14,7 @@ $.ajax({
 });
 
 function createDiv(title, abstract, url) {
-  $("#article-section").append(`<div class="border">
+  $("#article-section").append(`<div class="border" style-padding="20px">
   <h3>${title}</h3>
   <p>${abstract}</p>
   <a href=${url}>Article Link</a>

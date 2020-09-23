@@ -100,13 +100,22 @@
       document.querySelector("#darkModeBtn").addEventListener('click', function () {
         // toggle dark-mode class to the body
         document.querySelector("body").classList.toggle('dark-mode');
-        document.querySelector(".jumbotron").classList.toggle('dark-mode');
-        // document.querySelectorAll(".daily").classList.toggle('dark-mode-border');
+        document.querySelector(".jumbotron").classList.toggle('dark-mode-background');
+        document.querySelector("#currentMonth").classList.toggle('dark-mode-background');
+        document.querySelector("#calendarMonth").classList.toggle('dark-mode');
+        document.querySelector("#previousMonthBtn").classList.toggle('dark-mode');
+        document.querySelector("#nextMonthBtn").classList.toggle('dark-mode');
+        document.querySelector("#monthName").classList.toggle('dark-mode');
+        document.querySelector(".card-header").classList.toggle('dark-mode-background');
+        document.querySelector(".card").classList.toggle('dark-mode-background2');
         var dailyArray = document.querySelectorAll(".daily");
-          for(var i=0; i < dailyArray.length; i++) {
-            dailyArray[i].classList.toggle('dark-mode-border');
-          }
-          
+        for(var i=0; i < dailyArray.length; i++) {
+          dailyArray[i].classList.toggle('dark-mode-border');
+        }
+        var daysArray = document.querySelectorAll(".days");
+        for(var i=0; i < daysArray.length; i++) {
+          daysArray[i].classList.toggle('dark-mode-border')
+        } 
       })
 
       // Create a "close" button and append it to each list item
