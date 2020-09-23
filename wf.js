@@ -154,7 +154,40 @@ function getForecast(city) {
             }
         }
     });
-}   
+}
+function clear() {
+    //clear weather history ?
+    $("#forecast").empty();
+}
+function saveLocation(location){
+    // array of saved locations
+    if (savedLocations === null) {
+        savedLocations = [location];
+    }
+    else if (savedLocations.indexOf(location) === -1) {
+        savedLocations.push(location);
+    }
+    // array to local storage
+    localStorage.setItem("cities", JSON.stringify(savedLocations));
+    showPrevious();
+}
+$("#searchBtn").on("click", function () {
+    
+    event.preventDefault();
+    //grab the value
+    var location = $("#searchInput").val().trim();
+    // location ?
+    if (location !== "") {
+        // clear display city
+        clear();
+        currentLocation = location;
+        saveLocation(location);
+        // clear the search ?
+        $("#searchInput").val("");
+        //current city
+        getCurrent(location);
+    }
+});
 $(document).on("click", "#local-btn", function () {
     clear();
     currentLocation = $(this).text();
