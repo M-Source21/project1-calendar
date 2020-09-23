@@ -9,16 +9,16 @@ $.ajax({
   method: "GET",
 }).then(function (response) {
   for (i = 0; i < 2; i++) {
-    createDiv(response.results[i].title);
-
-    createDiv(response.results[i].abstract);
-
-    createDiv(response.results[i].url);
+    createDiv(response.results[i].title, response.results[i].abstract, response.results[i].url);
   }
 });
 
-function createDiv(contents) {
-  $("#article-section").append(`<div>${contents}</div>`);
+function createDiv(title, abstract, url) {
+  $("#article-section").append(`<div class="border">
+  <h3>${title}</h3>
+  <p>${abstract}</p>
+  <a href=${url}>Article Link</a>
+  </div>`);
 }
 
 //Adds two articles from NYT science section
@@ -30,17 +30,10 @@ $.ajax({
   method: "GET",
 }).then(function (response) {
   for (i = 0; i < 2; i++) {
-    createDiv(response.results[i].title);
-
-    createDiv(response.results[i].abstract);
-
-    createDiv(response.results[i].url);
+    createDiv(response.results[i].title, response.results[i].abstract, response.results[i].url);
+    console.log(response.results[i])
   }
 });
-
-function createDiv(contents) {
-  $("#article-section").append(`<div>${contents}</div>`);
-}
 
 //Adds two articles from NYT world news section
 var queryURL =
@@ -51,14 +44,6 @@ $.ajax({
   method: "GET",
 }).then(function (response) {
   for (i = 0; i < 2; i++) {
-    createDiv(response.results[i].title);
-
-    createDiv(response.results[i].abstract);
-
-    createDiv(response.results[i].url);
+    createDiv(response.results[i].title, response.results[i].abstract, response.results[i].url);
   }
 });
-
-function createDiv(contents) {
-  $("#article-section").append(`<div>${contents}</div>`);
-}
