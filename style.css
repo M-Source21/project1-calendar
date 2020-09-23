@@ -193,9 +193,9 @@ input {
 #nytFeed {
     display: flex;
     width: 450px;
-    border-spacing: 20px;
-    margin: 10px;
-    padding: 10px;
+    border-spacing: 16px;
+    /* margin: 10px;
+    padding: 10px; */
 }
 
 @media screen and (max-width: 900px) {
@@ -215,8 +215,8 @@ input {
     flex-direction: row;
     justify-content: space-between;
     margin: 10px 0px;
+    /* width: 50%; */
 }
-
 
 /* dark mode */
 .dark-mode {

@@ -8,7 +8,7 @@ $.ajax({
   url: queryURL,
   method: "GET",
 }).then(function (response) {
-  for (i = 0; i < 2; i++) {
+  for (i = 0; i < 1; i++) {
     createDiv(response.results[i].title, response.results[i].abstract, response.results[i].url);
   }
 });
@@ -29,21 +29,21 @@ $.ajax({
   url: queryURL,
   method: "GET",
 }).then(function (response) {
-  for (i = 0; i < 2; i++) {
+  for (i = 0; i < 1; i++) {
     createDiv(response.results[i].title, response.results[i].abstract, response.results[i].url);
     console.log(response.results[i])
   }
 });
 
-//Adds two articles from NYT world news section
-var queryURL =
-  "https://api.nytimes.com/svc/topstories/v2/world.json?api-key=R1a31F4tBjCUaM2ho8GtIFsrSdtXt30M";
+// //Adds two articles from NYT world news section
+// var queryURL =
+//   "https://api.nytimes.com/svc/topstories/v2/world.json?api-key=R1a31F4tBjCUaM2ho8GtIFsrSdtXt30M";
 
-$.ajax({
-  url: queryURL,
-  method: "GET",
-}).then(function (response) {
-  for (i = 0; i < 2; i++) {
-    createDiv(response.results[i].title, response.results[i].abstract, response.results[i].url);
-  }
-});
+// $.ajax({
+//   url: queryURL,
+//   method: "GET",
+// }).then(function (response) {
+//   for (i = 0; i < 2; i++) {
+//     createDiv(response.results[i].title, response.results[i].abstract, response.results[i].url);
+//   }
+// });
