@@ -210,6 +210,14 @@ input {
     }
 }
 
+.forecast {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+
+
 /* dark mode */
 .dark-mode {
     background-color: rgb(41, 41, 41);
@@ -233,4 +241,5 @@ input {
 .dark-mode-background2 {
     background-color: rgb(105, 105, 105);
     color: rgb(255, 255, 255);
+    background: darkgrey;
 }
