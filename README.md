@@ -49,4 +49,6 @@ GitHub: https://github.com/M-Source21/project1-calendar
 
 Live Link: https://m-source21.github.io/project1-calendar/
 
-Presentation Link: https://docs.google.com/document/d/1f4Vr6Lih51AcUtKgMwzsrXJSHGu39eVaZITDPahGtv0/edit?usp=sharing
+Presentation Doc: https://docs.google.com/document/d/1f4Vr6Lih51AcUtKgMwzsrXJSHGu39eVaZITDPahGtv0/edit?usp=sharing
+
+Presentation Slides: https://docs.google.com/presentation/d/1k1pYqBEgZzG3R9egRmJj0NLMA0iFigoYf_XVSlgDn2s/edit?usp=sharing
